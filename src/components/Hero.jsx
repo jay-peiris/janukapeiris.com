@@ -1,40 +1,72 @@
 import { motion } from "framer-motion";
-import { TypewriterEffect } from "./ui/TypewriterEffect";
-import { BackgroundBeams } from "./ui/BackgroundBeams";
-
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center text-center">
-          <h1 className="font-black text-white lg:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[80px]">
+    <section className="relative w-full h-screen mx-auto bg-gradient-to-b from-[#0a192f] to-[#112240]">
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+        <div className="flex flex-col justify-center items-center mt-5">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="w-5 h-5 rounded-full bg-[#64ffda]"
+          />
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: "200px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#64ffda] to-transparent"
+          />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#64ffda]">Jay</span>
           </h1>
-          <div className="mt-4">
-            <TypewriterEffect
-              words={[
-                "Technical Product Manager",
-                "Full Stack Developer",
-                "Data Architect",
-                "Data Evangelist",
-              ]}
-              className="text-[#64ffda] text-2xl font-bold"
-            />
-          </div>
-          <p className="text-[#dfd9ff] font-medium lg:text-[24px] sm:text-[20px] text-[16px] lg:leading-[40px] mt-4 max-w-2xl">
-            I build products that transform data into actionable insights, combining technical expertise with product management to create impactful solutions.
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            I develop products, user experiences, and scalable SaaS solutions
           </p>
-        </div>
+          <div className="mt-8 flex gap-4">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://occamflow.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg bg-[#64ffda] text-primary font-bold hover:bg-[#64ffda]/90 transition-colors"
+            >
+              Discover Occamflow
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#about"
+              className="px-6 py-3 rounded-lg border-2 border-[#64ffda] text-[#64ffda] font-bold hover:bg-[#64ffda]/10 transition-colors"
+            >
+              About Me
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
-
-      <BackgroundBeams className="absolute inset-0 -z-10" />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <motion.div
+            animate={{
+              y: [0, 24, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="w-[35px] h-[64px] rounded-3xl border-4 border-[#64ffda] flex justify-center items-start p-2"
+          >
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -44,9 +76,9 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 rounded-full bg-[#64ffda] mb-1"
             />
-          </div>
+          </motion.div>
         </a>
       </div>
     </section>

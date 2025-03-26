@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "../../utils/cn";
 
 export const TypewriterEffect = ({
@@ -8,54 +8,38 @@ export const TypewriterEffect = ({
   cursorClassName,
   cursor,
 }) => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
-  const [isReverse, setIsReverse] = useState(false);
-  const currentIndexRef = useRef(0);
-  const intervalRef = useRef(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
-    const animate = () => {
-      if (currentWordIndex >= words.length) {
-        setCurrentWordIndex(0);
-        currentIndexRef.current = 0;
-        setIsReverse(false);
-        setCurrentText("");
-        intervalRef.current = setTimeout(animate, 2000);
-        return;
-      }
+    const typeSpeed = isDeleting ? 50 : 100;
+    const pauseSpeed = 2000;
 
-      const currentWord = words[currentWordIndex];
-      if (isReverse) {
-        setCurrentText((prev) => prev.slice(0, -1));
-        if (currentText.length === 0) {
-          setIsReverse(false);
-          setCurrentWordIndex((prev) => prev + 1);
-          currentIndexRef.current = 0;
-          intervalRef.current = setTimeout(animate, 1000);
-        } else {
-          intervalRef.current = setTimeout(animate, 30);
+    const type = () => {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        setCurrentText(currentWord.substring(0, currentIndex - 1));
+        setCurrentIndex(currentIndex - 1);
+        if (currentText === "") {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+          setCurrentIndex(0);
         }
       } else {
-        if (currentIndexRef.current < currentWord.length) {
-          setCurrentText((prev) => prev + currentWord[currentIndexRef.current]);
-          currentIndexRef.current += 1;
-          intervalRef.current = setTimeout(animate, 150);
-        } else {
-          setIsReverse(true);
-          intervalRef.current = setTimeout(animate, 2000);
+        setCurrentText(currentWord.substring(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+        if (currentText === currentWord) {
+          setIsDeleting(true);
         }
       }
     };
 
-    intervalRef.current = setTimeout(animate, 100);
-
-    return () => {
-      if (intervalRef.current) {
-        clearTimeout(intervalRef.current);
-      }
-    };
-  }, [currentWordIndex, currentText, words, isReverse]);
+    const timer = setTimeout(type, isDeleting ? typeSpeed : currentText === words[wordIndex] ? pauseSpeed : typeSpeed);
+    return () => clearTimeout(timer);
+  }, [currentIndex, isDeleting, wordIndex, currentText, words]);
 
   return (
     <div className={cn("font-bold", className)}>

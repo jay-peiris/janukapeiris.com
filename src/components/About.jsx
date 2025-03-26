@@ -47,20 +47,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a highly skilled data professional with extensive experience in data engineering, product development, and process improvement. 
-        My proficiency in scripting languages such as Python and PowerShell, as well as my expertise in tools such as Snowflake and dbt, allow 
-        me to build innovative and efficient solutions for complex data challenges.
-        <br/><br/>
-        As a mentor to other developers and a leader in internal process 
-        improvement initiatives, I am constantly seeking ways to improve workflows and optimize data processes. 
-        <br/><br/>
-        My ability to generate full-stack technical process diagrams, including ERDs, dependencies, and security and firewall rules, 
-        ensures a thorough and thoughtful approach to data engineering.I have a proven track record of successfully leading internal process improvement 
-        initiatives for scoping requirements and UAT while carefully considering industry best practices.
-        <br/><br/>
-        Overall, I am passionate about using data to drive digital change and inform well-informed decisions. 
-        I am excited to continue pushing the boundaries of what is possible in the data engineering field and to make a 
-        meaningful impact on the organizations I work with.
+        I'm a Technical Product Manager with a unique blend of technical expertise and product leadership. 
+        My journey from Data Engineering to Product Management has given me a deep understanding of both 
+        technical implementation and business strategy. I specialize in building data-driven products that 
+        transform complex information into actionable insights.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
