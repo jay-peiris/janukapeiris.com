@@ -19,6 +19,7 @@ import {
   intelling,
   tesla,
   shopify,
+  aptitude,
   carrent,
   jobit,
   tripguide,
@@ -41,10 +42,6 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
-  },
-  {
-    id: "learn-html",
-    title: "Learn HTML",
   },
 ];
 
@@ -136,7 +133,7 @@ const experiences = [
   {
     title: "Product Manager - Data & AI",
     company_name: "Aptitude Software",
-    icon: meta,
+    icon: aptitude,
     iconBg: "#ffffff",
     date: "January 2024 - April 2024",
     points: [

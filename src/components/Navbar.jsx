@@ -102,11 +102,6 @@ const Navbar = () => {
                     handleNavigation(nav);
                   }}
                 >
-                  {nav.id === "learn-html" ? (
-                    <Link to="/learn-html">{nav.title}</Link>
-                  ) : (
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  )}
                 </li>
               ))}
             </ul>

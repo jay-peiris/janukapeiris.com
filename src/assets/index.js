@@ -25,6 +25,7 @@ import meta from "./company/vodafone.png";
 import shopify from "./company/shopify.png";
 import intelling from "./company/intelling.png";
 import tesla from "./company/assured.png";
+import aptitude from "./company/aptitude.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -56,6 +57,7 @@ export {
   shopify,
   intelling,
   tesla,
+  aptitude,
   carrent,
   jobit,
   tripguide,

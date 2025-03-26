@@ -832,23 +832,8 @@ Common attributes:
           
           {/* Main Content Area */}
           <div className="lg:w-3/4">
-            {/* Top Controls Bar */}
+            {/* View Mode Buttons - Horizontal at the top */}
             <div className="bg-[#112240] p-4 rounded-xl shadow-lg mb-6">
-              {/* Block Types Bar */}
-              <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-[#1a2c52]">
-                {blockTypes.map(blockType => (
-                  <button
-                    key={blockType.id}
-                    onClick={() => addBlock(blockType)}
-                    className="py-2 px-3 bg-[#1a2c52] hover:bg-[#253b69] rounded-lg text-sm transition-colors"
-                    title={blockType.desc}
-                  >
-                    {blockType.name}
-                  </button>
-                ))}
-              </div>
-              
-              {/* View Controls */}
               <div className="flex flex-wrap gap-4 justify-between items-center">
                 <div className="flex gap-4">
                   <button 
@@ -1038,7 +1023,8 @@ Common attributes:
             {/* Content Area - Horizontal Split */}
             <div className="flex flex-col xl:flex-row gap-6">
               {/* Left Side - Blocks or Code Editor */}
-              <div className={`${viewMode === 'split' ? 'xl:w-1/2' : 'xl:w-2/3'}`}>
+              <div className={`${viewMode === 'split' ? 'xl:w-1/2' : 'w-full'}`}>
+                {/* Blocks View */}
                 {(viewMode === 'blocks' || viewMode === 'split') && (
                   <div className="bg-[#112240] p-4 rounded-xl shadow-lg mb-6">
                     <h2 className="text-2xl font-bold mb-4 text-[#64ffda]">Your Web Page</h2>
@@ -1173,6 +1159,7 @@ Common attributes:
                   </div>
                 )}
                 
+                {/* Code View */}
                 {(viewMode === 'code' || viewMode === 'split') && (
                   <div className="bg-[#112240] p-4 rounded-xl shadow-lg">
                     <div className="flex justify-between items-center mb-4">
@@ -1237,25 +1224,27 @@ Common attributes:
               </div>
               
               {/* Right Side - Live Preview (Sticky) */}
-              <div className={`${viewMode === 'split' ? 'xl:w-1/2' : 'xl:w-1/3'}`}>
-                <div className="sticky top-24 bg-[#112240] p-4 rounded-xl shadow-lg">
-                  <h2 className="text-2xl font-bold mb-4 text-[#64ffda]">Live Preview</h2>
-                  <div className="bg-white p-5 rounded-lg">
-                    <div 
-                      className="preview-container text-black min-h-[300px] max-h-[500px] overflow-y-auto"
-                      dangerouslySetInnerHTML={{ 
-                        __html: blocks.map(block => {
-                          // Apply styles inline for preview
-                          if (block.styles && block.styles.length > 0) {
-                            return getBlockWithStyles(block);
-                          }
-                          return block.code;
-                        }).join('\n') 
-                      }}
-                    />
+              {(viewMode === 'blocks' || viewMode === 'split') && (
+                <div className={`${viewMode === 'split' ? 'xl:w-1/2' : 'w-full'}`}>
+                  <div className="sticky top-24 bg-[#112240] p-4 rounded-xl shadow-lg">
+                    <h2 className="text-2xl font-bold mb-4 text-[#64ffda]">Live Preview</h2>
+                    <div className="bg-white p-5 rounded-lg">
+                      <div 
+                        className="preview-container text-black min-h-[300px] max-h-[500px] overflow-y-auto"
+                        dangerouslySetInnerHTML={{ 
+                          __html: blocks.map(block => {
+                            // Apply styles inline for preview
+                            if (block.styles && block.styles.length > 0) {
+                              return getBlockWithStyles(block);
+                            }
+                            return block.code;
+                          }).join('\n') 
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
