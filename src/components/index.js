@@ -7,6 +7,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import { BackgroundBeams } from "./BackgroundBeams";
 import Expertise from "./Expertise";
+import LearnHTML from "./LearnHTML";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Contact,
   BackgroundBeams,
   Expertise,
+  LearnHTML,
 };

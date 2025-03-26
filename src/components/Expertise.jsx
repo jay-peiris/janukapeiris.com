@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ExpertiseCard = ({ title, description, index }) => (
   <motion.div
@@ -53,7 +54,7 @@ const Expertise = () => {
         drive real business value.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center">
         {expertise.map((expertise, index) => (
           <ExpertiseCard
             key={`expertise-${index}`}
@@ -66,4 +67,4 @@ const Expertise = () => {
   );
 };
 
-export default Expertise; 
+export default SectionWrapper(Expertise, "expertise"); 

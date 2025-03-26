@@ -25,6 +25,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle navigation based on link type (hash or route)
+  const handleNavigation = (nav) => {
+    setActive(nav.title);
+    if (nav.id === "learn-html") {
+      // Do nothing, let the Link component handle navigation
+    } else {
+      // For hash links, scroll to the section
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <nav
       className={`${
@@ -55,9 +66,13 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavigation(nav)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.id === "learn-html" ? (
+                <Link to="/learn-html">{nav.title}</Link>
+              ) : (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -84,10 +99,14 @@ const Navbar = () => {
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    handleNavigation(nav);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.id === "learn-html" ? (
+                    <Link to="/learn-html">{nav.title}</Link>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>

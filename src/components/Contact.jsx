@@ -46,14 +46,24 @@ const Contact = () => {
                 <p className="text-lg text-white/80 mb-8">
                   Ready to collaborate or discuss Occamflow?
                 </p>
-                <a 
-                  href="https://occamflow.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 rounded-lg bg-[#64ffda] text-primary font-bold hover:bg-[#64ffda]/90 transition-colors"
-                >
-                  Visit Occamflow
-                </a>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a 
+                    href="https://occamflow.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-lg bg-[#64ffda] text-primary font-bold hover:bg-[#64ffda]/90 transition-colors"
+                  >
+                    Visit Occamflow
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/jaypeiris/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-lg border-2 border-[#64ffda] text-[#64ffda] font-bold hover:bg-[#64ffda]/10 transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
