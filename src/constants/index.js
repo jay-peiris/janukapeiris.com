@@ -121,7 +121,7 @@ const experiences = [
     company_name: "Assured Insights",
     icon: tesla,
     iconBg: "#ffffff",
-    date: "December 2023 - Present",
+    date: "April 2024 - Present",
     points: [
       "Leading product strategy and roadmap for data-driven solutions",
       "Managing cross-functional teams of engineers and data scientists",
