@@ -124,6 +124,8 @@ const experiences = [
     date: "April 2024 - Present",
     points: [
       "Leading product strategy and roadmap for data-driven solutions",
+      "Architecting and developing a full-stack data platform with Django backend and React frontend",
+      "Building complex UI components and integrating multiple third-party APIs for data processing and visualization",
       "Managing cross-functional teams of engineers and data scientists",
       "Driving product development from conception to launch",
       "Working with stakeholders to define and prioritize features",
