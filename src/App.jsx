@@ -4,7 +4,6 @@ import {
   Navbar,
   About,
   Achievements,
-  Stats,
   Experience,
   Projects,
   TechStack,
@@ -23,7 +22,6 @@ const HomePage = () => {
         <Hero />
       </div>
       <About />
-      <Stats />
       <Achievements />
       <Experience />
       <Projects />

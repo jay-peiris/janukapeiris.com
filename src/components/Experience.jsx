@@ -70,7 +70,7 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Professional Experience.</h2>
       </motion.div>
 
-      <div className="mt-20 w-full">
+      <div className="mt-10 md:mt-20 w-full">
         {experiences && experiences.length > 0 ? (
           experiences.map((experience, index) => (
             <ExperienceCard key={`experience-${index}`} experience={experience} index={index} />

@@ -79,7 +79,7 @@ const services = [
   {
     title: "Full-Stack Builder",
     icon: mobile,
-    description: "Architecting and building end-to-end SaaS products with Django, React, and Kubernetes",
+    description: "Architecting and building end-to-end SaaS products from concept to deployment",
   },
   {
     title: "Data & AI Architect",
@@ -181,8 +181,6 @@ const techCategories = {
     { name: "Apache Airflow", icon: backend },
     { name: "dlt", icon: backend },
     { name: "SQLMesh", icon: backend },
-
-
   ],
   "Databases": [
     { name: "PostgreSQL", icon: mongodb },
@@ -217,7 +215,6 @@ const techCategories = {
     { name: "Looker", icon: tableauIcon },
     { name: "Sigma", icon: pbiIcon },
     { name: "Alteryx", icon: pbiIcon },
-    { name: "MicroStrategy", icon: pbiIcon },
     { name: "Omniscope", icon: pbiIcon },
     { name: "Custom BI Platform", icon: backend },
   ],
@@ -429,12 +426,27 @@ const achievements = [
   {
     metric: "£737K",
     label: "Annual Cost Savings",
-    description: "Reduced BI spend from £750K to £13K annually",
+    description: "Reduced BI spend from £750K to £13K annually (98%+ reduction)",
   },
   {
     metric: "37x",
     label: "Adoption Growth",
     description: "Dashboard users: 8/week → 300+/day globally",
+  },
+  {
+    metric: "Full-Stack",
+    label: "Platform Leadership",
+    description: "Solely architected and delivered production-grade B2B SaaS platform (Django/React/Kubernetes) with AI Semantic Layer",
+  },
+  {
+    metric: "15+",
+    label: "Data Sources",
+    description: "Built enterprise Snowflake/dbt/Azure data lake integrating 15+ sources",
+  },
+  {
+    metric: "9 Months",
+    label: "Time Saved",
+    description: "Designed Vodafone's global data visualization standards, saving 9 months of manual reporting annually",
   },
   {
     metric: "10+",

@@ -42,7 +42,7 @@ const TechStack = () => {
         integrated dozens of data technologies at enterprise scale.
       </motion.p>
 
-      <div className="mt-20 flex flex-col gap-6">
+      <div className="mt-10 md:mt-20 flex flex-col gap-6">
         {Object.entries(techCategories).map(([category, technologies], index) => (
           <TechCategory
             key={category}

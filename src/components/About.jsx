@@ -10,7 +10,7 @@ const ServiceCard = ({ index, title, description }) => (
   <div className="xs:w-[280px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
-      className="w-full bg-gradient-to-br from-tertiary to-[#0a1628] p-8 rounded-lg border border-accent/10 hover:border-accent/20 transition-all duration-300 min-h-[200px] flex flex-col justify-center"
+      className="w-full bg-gradient-to-br from-tertiary to-[#0a1628] p-8 rounded-lg border border-accent/10 hover:border-accent/20 transition-all duration-300 h-[220px] flex flex-col"
     >
       <div className="mb-4">
         <div className="w-12 h-1 bg-accent-gold rounded"></div>
@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, description }) => (
       <h3 className="text-white text-[22px] font-semibold mb-3 leading-tight">
         {title}
       </h3>
-      <p className="text-secondary text-[14px] leading-relaxed">
+      <p className="text-secondary text-[14px] leading-relaxed flex-1">
         {description}
       </p>
     </motion.div>
