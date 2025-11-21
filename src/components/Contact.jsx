@@ -44,7 +44,7 @@ const Contact = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="https://www.linkedin.com/in/jaypeiris91" 
+              href="https://www.linkedin.com/in/jaypeiris" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-8 py-3 rounded border-2 border-accent-gold/40 bg-accent-gold/10 text-accent-gold font-semibold hover:bg-accent-gold/20 hover:border-accent-gold/60 transition-all duration-300"
