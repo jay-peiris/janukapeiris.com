@@ -38,7 +38,7 @@ const Hero = () => {
             simultaneously. Adept at building greenfield products, driving enterprise data strategies, and delivering measurable business 
             outcomes through scalable, elegant solutions.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 mb-16 md:mb-0 flex flex-wrap gap-4">
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

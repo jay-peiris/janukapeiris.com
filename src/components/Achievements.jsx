@@ -39,7 +39,7 @@ const Achievements = () => {
         These achievements demonstrate both technical execution and strategic leadership.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      <div className="mt-10 md:mt-20 flex flex-wrap gap-10 justify-center">
         {achievements.map((achievement, index) => (
           <AchievementCard
             key={`achievement-${index}`}

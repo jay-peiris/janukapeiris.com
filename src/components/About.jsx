@@ -45,7 +45,7 @@ const About = () => {
         quality, and measurable impact.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <div className="mt-10 md:mt-20 flex flex-wrap gap-7 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
