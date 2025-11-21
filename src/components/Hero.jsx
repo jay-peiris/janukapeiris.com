@@ -33,9 +33,10 @@ const Hero = () => {
             Product Leader | Data & AI Strategist | Full-Stack Builder
           </p>
           <p className="mt-8 text-white/70 text-[18px] max-w-3xl leading-relaxed font-light">
-            Senior Product and Data Leader with 10+ years delivering modern data and AI platforms 
-            at scale. Combining executive-level vision with hands-on technical capability to drive 
-            enterprise transformation.
+            Product, Data, and AI Leader with 10+ years delivering modern data platforms and full-stack SaaS products end-to-end. 
+            Known for combining strategic clarity with deep technical capability—often acting as architect, engineer, and product owner 
+            simultaneously. Adept at building greenfield products, driving enterprise data strategies, and delivering measurable business 
+            outcomes through scalable, elegant solutions.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <motion.a
