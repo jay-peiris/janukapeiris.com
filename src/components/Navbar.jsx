@@ -32,7 +32,10 @@ const Navbar = () => {
       // Do nothing, let the Link component handle navigation
     } else {
       // For hash links, scroll to the section
-      window.scrollTo(0, 0);
+      const element = document.getElementById(nav.id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -102,6 +105,11 @@ const Navbar = () => {
                     handleNavigation(nav);
                   }}
                 >
+                  {nav.id === "learn-html" ? (
+                    <Link to="/learn-html">{nav.title}</Link>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>

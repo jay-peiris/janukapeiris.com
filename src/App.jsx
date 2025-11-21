@@ -3,10 +3,15 @@ import {
   Hero,
   Navbar,
   About,
+  Achievements,
+  Stats,
   Experience,
+  Projects,
+  TechStack,
+  Leadership,
+  Expertise,
   Contact,
   BackgroundBeams,
-  Expertise,
   LearnHTML,
 } from "./components";
 
@@ -18,7 +23,12 @@ const HomePage = () => {
         <Hero />
       </div>
       <About />
+      <Stats />
+      <Achievements />
       <Experience />
+      <Projects />
+      <TechStack />
+      <Leadership />
       <Expertise />
       <div className="relative z-0">
         <Contact />

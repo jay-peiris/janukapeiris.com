@@ -8,6 +8,11 @@ import Contact from "./Contact";
 import { BackgroundBeams } from "./BackgroundBeams";
 import Expertise from "./Expertise";
 import LearnHTML from "./LearnHTML";
+import Achievements from "./Achievements";
+import Stats from "./Stats";
+import Leadership from "./Leadership";
+import Projects from "./Projects";
+import TechStack from "./TechStack";
 
 export {
   Navbar,
@@ -20,4 +25,9 @@ export {
   BackgroundBeams,
   Expertise,
   LearnHTML,
+  Achievements,
+  Stats,
+  Leadership,
+  Projects,
+  TechStack,
 };

@@ -2,70 +2,61 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { BackgroundBeams } from "./BackgroundBeams";
 
 const Contact = () => {
   return (
     <>
-      <div className="xl:mt-12 flex flex-col gap-10 overflow-hidden">
+      <div className="flex flex-col gap-10">
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col items-center text-center mb-10"
+          className="flex flex-col items-center text-center"
         >
-          <h2 className={styles.sectionHeadText}>Contact</h2>
-          <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center">
-            Feel free to reach out to me directly with any questions or opportunities.
-          </p>
-          <div className="flex flex-wrap justify-center gap-10 mt-8">
+          <h2 className={`${styles.sectionHeadText} mb-12`}>Get In Touch</h2>
+          
+          <div className="flex flex-col sm:flex-row gap-8 mb-12 items-center justify-center">
             <a 
-              href="mailto:jay@occamflow.com" 
-              className="flex items-center gap-2 text-white hover:text-[#64ffda] transition-colors text-xl"
+              href="mailto:jaypeiris91@gmail.com" 
+              className="flex items-center gap-3 text-white hover:text-accent transition-colors text-lg group"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#64ffda]">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              jay@occamflow.com
+              <div className="p-3 rounded-full border border-accent-gold/30 group-hover:border-accent-gold/60 group-hover:bg-accent-gold/10 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-gold">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <span>jaypeiris91@gmail.com</span>
+            </a>
+            
+            <a 
+              href="tel:+447706650509" 
+              className="flex items-center gap-3 text-white hover:text-accent transition-colors text-lg group"
+            >
+              <div className="p-3 rounded-full border border-accent-gold/30 group-hover:border-accent-gold/60 group-hover:bg-accent-gold/10 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-gold">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span>+44 7706 650509</span>
             </a>
           </div>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="rounded-2xl overflow-hidden"
-        >
-          <div className="w-full h-64 bg-gradient-to-r from-[#112240] to-[#0a192f] rounded-2xl overflow-hidden">
-            <BackgroundBeams className="absolute inset-0 z-0" />
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-              <div className="text-center p-8">
-                <h2 className="text-4xl font-bold text-white mb-4">Let's Connect</h2>
-                <p className="text-lg text-white/80 mb-8">
-                  Ready to collaborate or discuss Occamflow?
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <a 
-                    href="https://occamflow.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 rounded-lg bg-[#64ffda] text-primary font-bold hover:bg-[#64ffda]/90 transition-colors"
-                  >
-                    Visit Occamflow
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/jaypeiris/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 rounded-lg border-2 border-[#64ffda] text-[#64ffda] font-bold hover:bg-[#64ffda]/10 transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://www.linkedin.com/in/jaypeiris91" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded border-2 border-accent-gold/40 bg-accent-gold/10 text-accent-gold font-semibold hover:bg-accent-gold/20 hover:border-accent-gold/60 transition-all duration-300"
+            >
+              Connect on LinkedIn
+            </a>
+            <a 
+              href="mailto:jaypeiris91@gmail.com" 
+              className="px-8 py-3 rounded border-2 border-accent/30 text-accent font-semibold hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
+            >
+              Send Email
+            </a>
           </div>
         </motion.div>
       </div>

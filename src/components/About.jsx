@@ -1,5 +1,4 @@
 import React from "react";
-import { Tilt } from "react-tilt"; // modify import statement to import Tilt component
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,32 +6,23 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+const ServiceCard = ({ index, title, description }) => (
+  <div className="xs:w-[280px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      variants={fadeIn("right", "spring", index * 0.3, 0.75)}
+      className="w-full bg-gradient-to-br from-tertiary to-[#0a1628] p-8 rounded-lg border border-accent/10 hover:border-accent/20 transition-all duration-300 min-h-[200px] flex flex-col justify-center"
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
+      <div className="mb-4">
+        <div className="w-12 h-1 bg-accent-gold rounded"></div>
       </div>
+      <h3 className="text-white text-[22px] font-semibold mb-3 leading-tight">
+        {title}
+      </h3>
+      <p className="text-secondary text-[14px] leading-relaxed">
+        {description}
+      </p>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
@@ -47,13 +37,15 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a Technical Product Manager with a unique blend of technical expertise and product leadership. 
-        My journey from Data Engineering to Product Management has given me a deep understanding of both 
-        technical implementation and business strategy. I specialize in building data-driven products that 
-        transform complex information into actionable insights.
+        Product, Data, and AI Leader with 10+ years of experience delivering modern data platforms 
+        and full-stack SaaS products end-to-end. Known for combining strategic clarity with deep technical 
+        capability—often acting as architect, engineer, and product owner simultaneously. Adept at building 
+        greenfield products, driving enterprise data strategies, and simplifying complex problems into scalable, 
+        elegant solutions. Brings a calm, structured, outcome-driven approach with an emphasis on velocity, 
+        quality, and measurable impact.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
