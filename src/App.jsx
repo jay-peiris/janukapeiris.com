@@ -21,7 +21,7 @@ const HomePage = () => {
         <Navbar />
         <Hero />
       </div>
-      <div className="pt-8 md:pt-0">
+      <div className="pt-24 md:pt-0">
         <About />
       </div>
       <Achievements />

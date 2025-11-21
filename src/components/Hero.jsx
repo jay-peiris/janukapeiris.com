@@ -3,7 +3,7 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen min-h-[700px] mx-auto bg-gradient-to-b from-[#0a192f] via-[#0f1f35] to-[#0a192f]">
+    <section className="relative w-full h-screen min-h-[700px] mx-auto bg-gradient-to-b from-[#0a192f] via-[#0f1f35] to-[#0a192f] pb-20 md:pb-0">
       <div className={`${styles.paddingX} absolute inset-0 top-[100px] md:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <motion.div
@@ -38,7 +38,7 @@ const Hero = () => {
             simultaneously. Adept at building greenfield products, driving enterprise data strategies, and delivering measurable business 
             outcomes through scalable, elegant solutions.
           </p>
-          <div className="mt-10 mb-16 md:mb-0 flex flex-wrap gap-4">
+          <div className="mt-10 mb-24 md:mb-0 flex flex-wrap gap-4">
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -71,7 +71,7 @@ const Hero = () => {
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
-          <div className="hidden md:block w-[35px] h-[64px] rounded-3xl border-4 border-accent/20 flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-accent/20 flex justify-center items-start p-2 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto">
             <motion.div
               animate={{
                 y: [0, 24, 0],
