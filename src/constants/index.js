@@ -172,11 +172,6 @@ const techCategories = {
     { name: "Databricks", icon: backend },
     { name: "BigQuery", icon: backend },
     { name: "Azure Synapse", icon: backend },
-    { name: "Postgres", icon: backend },
-    { name: "MySQL", icon: backend },
-    { name: "SQL Server", icon: backend },
-    { name: "Vector DBs", icon: backend },
-    { name: "BigQuery", icon: backend },
   ],
   "Data Engineering & Transformation": [
     { name: "dbt", icon: dbt },
@@ -184,6 +179,10 @@ const techCategories = {
     { name: "Airbyte", icon: backend },
     { name: "Azure Data Factory", icon: backend },
     { name: "Apache Airflow", icon: backend },
+    { name: "dlt", icon: backend },
+    { name: "SQLMesh", icon: backend },
+
+
   ],
   "Databases": [
     { name: "PostgreSQL", icon: mongodb },
@@ -198,15 +197,18 @@ const techCategories = {
     { name: "Django", icon: backend },
     { name: "React", icon: reactIcon },
     { name: "TypeScript", icon: typescriptIcon },
+    { name: "Node.js", icon: nodejs },
     { name: "FastAPI", icon: backend },
-
   ],
   "Cloud & Infrastructure": [
     { name: "Azure", icon: backend },
+    { name: "AWS", icon: backend },
     { name: "GCP", icon: backend },
     { name: "Kubernetes", icon: docker },
+    { name: "GKE", icon: docker },
     { name: "Docker", icon: docker },
     { name: "CI/CD", icon: git },
+    { name: "GitHub", icon: git },
   ],
   "BI & Analytics Tools": [
     { name: "Power BI", icon: pbiIcon },
@@ -224,6 +226,15 @@ const techCategories = {
     { name: "Semantic Modeling", icon: backend },
     { name: "MLOps", icon: backend },
     { name: "Vector Search", icon: backend },
+    { name: "Prompt Engineering", icon: backend },
+    { name: "Anomaly Detection", icon: backend },
+  ],
+  "Architecture & Patterns": [
+    { name: "Microservices", icon: backend },
+    { name: "API Design", icon: backend },
+    { name: "Event-Driven", icon: backend },
+    { name: "Observability", icon: backend },
+    { name: "Orchestration", icon: backend },
   ],
 };
 
