@@ -86,7 +86,7 @@ const Projects = () => {
         from architecture through delivery and adoption.
       </motion.p>
 
-      <div className="mt-10 md:mt-20 flex flex-wrap gap-10 justify-center">
+      <div className="mt-6 md:mt-20 flex flex-wrap gap-10 justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
