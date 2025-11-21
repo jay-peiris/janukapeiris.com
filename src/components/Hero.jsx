@@ -3,7 +3,7 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen min-h-[700px] mx-auto bg-gradient-to-b from-[#0a192f] via-[#0f1f35] to-[#0a192f]">
+    <section className="relative w-full h-screen min-h-[700px] mx-auto bg-gradient-to-b from-[#0a192f] via-[#0f1f35] to-[#0a192f] pb-16 md:pb-0">
       <div className={`${styles.paddingX} absolute inset-0 top-[100px] md:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <motion.div
