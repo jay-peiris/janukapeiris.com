@@ -446,7 +446,7 @@ const achievements = [
   {
     metric: "9 Months",
     label: "Time Saved",
-    description: "Designed Vodafone's global data visualization standards, saving 9 months of manual reporting annually",
+    description: "Designed enterprise-wide data visualization standards, saving 9 months of manual reporting annually",
   },
   {
     metric: "10+",
