@@ -2,9 +2,6 @@
 
 <div align="center">
 
-  ![Portfolio Banner](readme_assets/readme_banner.png#gh-dark-mode-only)
-  ![Portfolio Banner](readme_assets/readme_banner-light.png#gh-light-mode-only)
-
   <h3>A modern, interactive 3D portfolio website built with React, Three.js, and TailwindCSS</h3>
 
   <p>
