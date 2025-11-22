@@ -28,19 +28,22 @@ const ServiceCard = ({ index, title, description }) => (
 const About = () => {
   return (
     <>
-      <div>
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </div>
+      </motion.div>
 
-      <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
         Product, Data, and AI Leader with 10+ years of experience delivering modern data platforms 
         and full-stack SaaS products end-to-end. Known for combining strategic clarity with deep technical 
         capability—often acting as architect, engineer, and product owner simultaneously. Adept at building 
         greenfield products, driving enterprise data strategies, and simplifying complex problems into scalable, 
         elegant solutions. Brings a calm, structured, outcome-driven approach with an emphasis on velocity, 
         quality, and measurable impact.
-      </p>
+      </motion.p>
 
       <div className="mt-10 md:mt-20 flex flex-wrap gap-7 justify-center">
         {services.map((service, index) => (
