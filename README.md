@@ -6,8 +6,6 @@
 
   <p>
     <a href="https://www.janukapeiris.com">View Live Demo</a>
-    <span> · </span>
-    <a href="#getting-started">Documentation</a>
   </p>
 </div>
 
